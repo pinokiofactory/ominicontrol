@@ -2,7 +2,7 @@ const path = require('path')
 module.exports = {
   version: "2.0",
   title: "OmniControl",
-  description: "",
+  description: "A minimal and universal controller for FLUX.1 https://github.com/Yuanshi9815/OminiControl",
   icon: "icon.png",
   menu: async (kernel, info) => {
     let installed = info.exists("app/env")
