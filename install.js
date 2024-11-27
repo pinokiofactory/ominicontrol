@@ -5,7 +5,7 @@ module.exports = {
       method: "shell.run",
       params: {
         message: [
-          "git clone https://github.com/cocktailpeanut/OminiControl app",
+          "git clone https://github.com/peanutcocktail/OminiControl app",
         ]
       }
     },
