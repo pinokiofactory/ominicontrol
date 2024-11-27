@@ -5,10 +5,12 @@ module.exports = {
       method: "shell.run",
       params: {
         venv: "env",                // Edit this to customize the venv folder path
-        env: { },                   // Edit this to customize environment variables (see documentation)
+        env: {
+          USE_INT8: 1
+        },                   // Edit this to customize environment variables (see documentation)
         path: "app",                // Edit this to customize the path to start the shell from
         message: [
-          "python src/gradio/gradio_app.py",    // Edit with your custom commands
+          "python -m src.gradio.gradio_app",    // Edit with your custom commands
         ],
         on: [{
           // The regular expression pattern to monitor.
