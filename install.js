@@ -21,6 +21,17 @@ module.exports = {
         }
       }
     },
+    {
+      when: "{{gpu === 'nvidia' && platform === 'win32'}}",
+      method: "shell.run",
+      params: {
+        venv: "env",                // Edit this to customize the venv folder path
+        path: "app",                // Edit this to customize the path to start the shell from
+        message: [
+          "pip install --pre torchao --index-url https://download.pytorch.org/whl/nightly/cu121",
+        ]
+      }
+    },
     // Edit this step with your custom install commands
     {
       method: "shell.run",
