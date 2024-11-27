@@ -26,9 +26,12 @@ module.exports = {
       method: "shell.run",
       params: {
         venv: "env",                // Edit this to customize the venv folder path
+        env: {
+          USE_CPP: 0
+        },
         path: "app",                // Edit this to customize the path to start the shell from
         message: [
-          "pip install --pre torchao --index-url https://download.pytorch.org/whl/nightly/cu121",
+          "pip install git+https://github.com/pytorch/ao"
         ]
       }
     },
